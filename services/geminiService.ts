@@ -3,7 +3,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { TestConfig, GeneratedTest, QuestionType } from "../types";
 
 const getApiKey = () => {
-  return localStorage.getItem('GEMINI_API_KEY') || process.env.API_KEY || '';
+  return localStorage.getItem('GEMINI_API_KEY') || process.env.GEMINI_API_KEY || '';
 };
 
 export const getTopicSuggestions = async (config: Partial<TestConfig>): Promise<string[]> => {
